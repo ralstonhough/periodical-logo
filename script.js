@@ -1,9 +1,5 @@
 let FALogo = document.getElementById("FALogo");
 
-let doomsDayMinutes = 1.66;
-let doomsDayScaler = map(doomsDayMinutes, 17, 0, 100, 0);
-FALogo.style.webkitMaskImage = `linear-gradient(0deg, transparent 0%, rgba(0,0,0,1) ${doomsDayScaler}%)`;
-
 let faRSS = `https://www.foreignaffairs.com/rss.xml`;
 fetch(faRSS)
     .then(response => response.text())
@@ -34,7 +30,7 @@ fetch(faRSS)
             .then(response => response.json())
             .then(response => {
                 let score = response.score;
-                let ratio = response.ratio;
+                let ratio = -1;
                 let ratioScaler = map(ratio, 1, -1, .025, .22);
                 console.log(ratioScaler);
                 console.log(response);
