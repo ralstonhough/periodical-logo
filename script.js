@@ -28,6 +28,7 @@ fetch(faRSS)
                 'X-RapidAPI-Host': 'twinword-sentiment-analysis.p.rapidapi.com'
             }
         };
+//Thanks to Chris Coyier for how to parse RSS to string
         
         fetch(`https://twinword-sentiment-analysis.p.rapidapi.com/analyze/?text=${faText}`, options)
             .catch(err => console.error(err))
