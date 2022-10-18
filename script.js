@@ -1,6 +1,3 @@
-// let cnv;
-let score;
-let ratio;
 let FALogo = document.getElementById("FALogo");
 
 let doomsDayMinutes = 1.66;
@@ -34,7 +31,6 @@ fetch(faRSS)
             }
         };
 //Thanks to Chris Coyier for how to parse RSS to string
-        
         fetch(`https://twinword-sentiment-analysis.p.rapidapi.com/analyze/?text=${faText}`, options)
             .catch(err => console.error(err))
             .then(response => response.json())
@@ -49,44 +45,6 @@ fetch(faRSS)
                 FALogo.style.transform = `translate(-50%,0) scale(.025,${scoreScaler})`;
             });
     });
-
-// function preload() {
-//     title = loadImage("FAlogo.png");
-// };
-
-// function setup() {
-//     cnv = createCanvas(700,1000);
-//     centerCanvas();
-//     setGradient(color(255), color(0));
-// };
-
-// function draw() {
-//     setGradient(color(255), color(0));
-//     imageMode(CENTER);
-//     scale(.05);
-//     translate(width*9,height*9);
-//     image(title, width/2, -7000);
-// };
-
-// function centerCanvas() {
-//     cnv.position((windowWidth - width) / 2, 0);
-// };
-
-// function windowResized() {
-//     centerCanvas();
-// };
-
-// function setGradient(c1, c2) {
-//     // noprotect
-//     noFill();
-//     for (var y = 0; y < height; y++) {
-//       var inter = map(y, 0, height, 0, 2);
-//       var c = lerpColor(c1, c2, inter);
-//       stroke(c);
-//       line(0, y, width, y);
-//     }
-//   };
-//gradient code taken from REAS on p5 website
 
 // let sentiment = document.getElementById("sentiment");
 // let doomsDay = document.getElementById("doomsDay");
