@@ -2,11 +2,9 @@ let FALogo = document.getElementById("FALogo");
 
 let doomsDayMinutes = 1.66;
 let doomsDayScaler = map(doomsDayMinutes, 17, 0, 100, 0);
-
 FALogo.style.webkitMaskImage = `linear-gradient(0deg, transparent 0%, rgba(0,0,0,1) ${doomsDayScaler}%)`;
 
 let faRSS = `https://www.foreignaffairs.com/rss.xml`;
-
 fetch(faRSS)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -30,7 +28,9 @@ fetch(faRSS)
                 'X-RapidAPI-Host': 'twinword-sentiment-analysis.p.rapidapi.com'
             }
         };
+
 //Thanks to Chris Coyier for how to parse RSS to string
+        
         fetch(`https://twinword-sentiment-analysis.p.rapidapi.com/analyze/?text=${faText}`, options)
             .catch(err => console.error(err))
             .then(response => response.json())
