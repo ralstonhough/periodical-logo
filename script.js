@@ -37,12 +37,12 @@ fetch(faRSS)
             .then(response => {
                 let score = response.score;
                 let ratio = response.ratio;
-                let scoreScaler = map(score, 1, -1, .025, .22);
-                console.log(scoreScaler);
+                let ratioScaler = map(ratio, 1, -1, .025, .22);
+                console.log(ratioScaler);
                 console.log(response);
                 console.log(`Score: ${score}`);
                 console.log(`Ratio: ${ratio}`);
-                FALogo.style.transform = `translate(-50%,0) scale(.025,${scoreScaler})`;
+                FALogo.style.transform = `translate(-50%,0) scale(.025,${ratioScaler})`;
             });
     });
 
