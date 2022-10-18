@@ -1,0 +1,50 @@
+#background{
+    background:white;
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    margin:0;
+    top:0;
+    left:0;
+  }
+
+  /*
+  .gradient{
+    background-image: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 100%);
+    height: 100vh;
+    width:40vw;
+  }
+  */
+
+  #FALogo{
+    margin:0;
+    position:fixed;
+    left:50vw;
+    top:-185vh;
+    transform: translate(-50%,0) scale(.025, .025);
+  }
+
+  /* #sentimentLabel{
+    font-family:Helvetica;
+    font-weight:700;
+  }
+  
+  #doomsDayLabel{
+    font-family:Helvetica;
+    font-weight:700;
+    position:fixed;
+    left:0;
+    top:7vh;
+  }
+  
+  #doomsDay{
+    position:fixed;
+    left:0;
+    top:10vh;
+  }
+  
+  #sentiment{
+    position:fixed;
+    left:0;
+    top:3vh;
+  } */
