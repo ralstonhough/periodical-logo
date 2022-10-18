@@ -3,6 +3,11 @@ let score;
 let ratio;
 let FALogo = document.getElementById("FALogo");
 
+let doomsDayMinutes = 1.66;
+let doomsDayScaler = map(doomsDayMinutes, 17, 0, 100, 0);
+
+FALogo.style.webkitMaskImage = `linear-gradient(0deg, transparent 0%, rgba(0,0,0,1) ${doomsDayScaler}%)`;
+
 let faRSS = `https://www.foreignaffairs.com/rss.xml`;
 
 fetch(faRSS)

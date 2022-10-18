@@ -14,6 +14,8 @@
     left:50vw;
     top:-185vh;
     transform: translate(-50%,0) scale(.025, .025);
+    -webkit-mask-image: linear-gradient(0deg, transparent 0%, rgba(0,0,0,1) 100%);
+    mask-image: linear-gradient(0deg, transparent 0%, rgba(0,0,0,1) 100%);
   }
 
 
